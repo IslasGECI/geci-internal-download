@@ -1,4 +1,4 @@
-import geci_streamlit as dt
+import geci_internal_download as dt
 
 
 def test_add_offset():
