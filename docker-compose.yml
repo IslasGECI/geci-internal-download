@@ -21,10 +21,13 @@ services:
     ports:
       - "8502:8501"
     volumes:
-      - $PWD:/workdir
+      - $PWD:/geci-internal-download:/workdir
+      - $PWD:/tabular_data_packages:/workdir/data
   app_service:
     image: islasgeci/internal_download:latest
     container_name: "core-api-container"
     entrypoint: ["streamlit", "run", "src/streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
     ports:
       - "8501:8501"
+    volumes:
+      - $PWD:/tabular_data_packages:/workdir/data
