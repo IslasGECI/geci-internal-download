@@ -10,7 +10,7 @@ V3
 """
 )
 
-r = requests.get("http://172.27.0.2:10000").json()
+r = requests.get("http://core_api:10000").json()
 st.write(r)
 
 df = pd.read_csv("/workdir/data/seabird_tracking/bl_gps_albatross_guadalupe.csv")
