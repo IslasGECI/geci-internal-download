@@ -21,8 +21,8 @@ services:
     ports:
       - "8502:8501"
     volumes:
-      - $PWD:/geci-internal-download:/workdir
-      - $PWD:/tabular_data_packages:/workdir/data
+      - $PWD/geci-internal-download:/workdir
+      - $PWD/tabular_data_packages:/workdir/data
   app_service:
     image: islasgeci/internal_download:latest
     container_name: "core-api-container"
@@ -30,4 +30,4 @@ services:
     ports:
       - "8501:8501"
     volumes:
-      - $PWD:/tabular_data_packages:/workdir/data
+      - $PWD/tabular_data_packages:/workdir/data
