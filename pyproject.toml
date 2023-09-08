@@ -11,7 +11,9 @@ home-page = "https://github.com/IslasGECI/geci-internal-download"
 module = "geci_internal_download"
 requires = [
     "descarga-datos==0.*",
+    "pandas",
     "pandas-stubs",
+    "types-requests",
     "streamlit"
 ]
 requires-python=">=3.9"
