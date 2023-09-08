@@ -28,4 +28,4 @@ st.download_button(
 )
 
 
-st.dataframe(df)
+st.dataframe(df, hide_index=True)
